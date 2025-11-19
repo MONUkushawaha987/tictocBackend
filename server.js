@@ -14,7 +14,7 @@ const USERS_FILE = path.join(__dirname, 'users.json');
 // Middleware
 app.use(cors(
    { 
-    origin: 'https://https-github-com-monukushawaha987.onrender.com',
+    origin: 'https://tictocmk.netlify.app/',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type']  
     }
