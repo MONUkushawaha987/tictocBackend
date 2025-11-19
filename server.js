@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // --- File Path Configuration ---
 const USERS_FILE = path.join(__dirname, 'users.json');
@@ -14,7 +14,9 @@ const USERS_FILE = path.join(__dirname, 'users.json');
 // Middleware
 app.use(cors(
    { 
-    origin: '*'  
+    origin: 'https://https-github-com-monukushawaha987.onrender.com',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']  
     }
 ));
 app.use(bodyParser.json());
