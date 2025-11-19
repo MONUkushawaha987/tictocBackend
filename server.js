@@ -52,7 +52,7 @@ const saveUsers = () => {
 };
 
 // --- API Endpoint for Registration ---
-app.post('/api/register', (req, res) => {
+app.post('https://https-github-com-monukushawaha987.onrender.com/api/register', (req, res) => {
   const { username, password } = req.body;
   
   if (!username || !password) {
@@ -76,7 +76,7 @@ app.post('/api/register', (req, res) => {
 });
 
 // --- API Endpoint for Login (NEW) ---
-app.post('/api/login', (req, res) => {
+app.post('https://https-github-com-monukushawaha987.onrender.com/api/login', (req, res) => {
     const { username, password } = req.body;
     
     if (!username || !password) {
@@ -107,7 +107,7 @@ app.post('/api/login', (req, res) => {
 
 
 // --- API Endpoint to get Scores (Leaderboard) ---
-app.get('/api/scores', (req, res) => {
+app.get('https://https-github-com-monukushawaha987.onrender.com/api/scores', (req, res) => {
     const leaderboard = users.sort((a, b) => b.score - a.score).map(u => ({ username: u.username, score: u.score }));
     res.json(leaderboard);
 });
